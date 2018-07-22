@@ -80,12 +80,13 @@ function savedb() {
   getOkDepth('eos_usdt').then((e) => {
     const kitty = new okdepth({ res: e, date: +new Date() })
     kitty.save().then((res) => {
-      // console.log('meow')
+      console.log('save getOkDepth')
     })
   })
   getOkKLine('eos_usdt').then((e) => {
     const kitty = new okdepth({ res: e, date: +new Date() })
     kitty.save().then((res) => {
+      console.log('save getOkKLine')
       // console.log('meow')
     })
   })
