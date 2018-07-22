@@ -84,7 +84,7 @@ function savedb() {
     })
   })
   getOkKLine('eos_usdt').then((e) => {
-    const kitty = new okdepth({ res: e, date: +new Date() })
+    const kitty = new okkline({ res: e, date: +new Date() })
     kitty.save().then((res) => {
       console.log('save getOkKLine')
       // console.log('meow')
