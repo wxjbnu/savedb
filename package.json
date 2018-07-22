@@ -1,0 +1,25 @@
+{
+  "name": "savedb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "colors": "^1.3.0",
+    "crypto": "^1.0.1",
+    "mongoose": "^5.2.4",
+    "querystring": "^0.2.0",
+    "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "mongodb": "^3.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "wxj",
+  "license": "MIT"
+}
