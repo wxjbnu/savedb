@@ -76,13 +76,15 @@ function setOption({url, data = {}, method = 'GET', header = {"content-type": co
 }
 
 
-function savedb() {
+function savedbdepth() {
   getOkDepth('eos_usdt').then((e) => {
     const kitty = new okdepth({ res: e, date: +new Date() })
     kitty.save().then((res) => {
       console.log('save getOkDepth')
     })
   })
+}
+function savedbkline(params) {
   getOkKLine('eos_usdt').then((e) => {
     const kitty = new okkline({ res: e, date: +new Date() })
     kitty.save().then((res) => {
@@ -91,7 +93,10 @@ function savedb() {
     })
   })
 }
-
+savedbdepth()
 setInterval(() => {
-  savedb()
+  savedbdepth()
 }, 60 * 1000)
+setInterval(() => {
+  savedbkline()
+}, 60 * 1000 * 10)
